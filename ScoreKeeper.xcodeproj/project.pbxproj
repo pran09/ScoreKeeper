@@ -22,6 +22,9 @@
 		0AE638B52055BFE000FB41C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AE638B82055BFE000FB41C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AE638BA2055BFE000FB41C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AE638C22055D57800FB41C3 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		0AE638C32055D57900FB41C3 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		0AE638C42055D57E00FB41C3 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +42,6 @@
 			isa = PBXGroup;
 			children = (
 				0AE638AD2055BFE000FB41C3 /* ScoreKeeper */,
-				0AE638AC2055BFE000FB41C3 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -49,6 +51,7 @@
 				0AE638AB2055BFE000FB41C3 /* ScoreKeeper.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		0AE638AD2055BFE000FB41C3 /* ScoreKeeper */ = {
@@ -60,6 +63,10 @@
 				0AE638B52055BFE000FB41C3 /* Assets.xcassets */,
 				0AE638B72055BFE000FB41C3 /* LaunchScreen.storyboard */,
 				0AE638BA2055BFE000FB41C3 /* Info.plist */,
+				0AE638C22055D57800FB41C3 /* Icon-72.png */,
+				0AE638C32055D57900FB41C3 /* Icon.png */,
+				0AE638C42055D57E00FB41C3 /* Icon@2x.png */,
+				0AE638AC2055BFE000FB41C3 /* Products */,
 			);
 			path = ScoreKeeper;
 			sourceTree = "<group>";
