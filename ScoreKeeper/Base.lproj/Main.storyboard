@@ -1,24 +1,199 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ScoreKeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qoc-Oj-YFY">
+                                <rect key="frame" x="33" y="71" width="75" height="30"/>
+                                <state key="normal" title="New Game"/>
+                                <connections>
+                                    <action selector="pressedNewGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eG7-54-8Pi"/>
+                                </connections>
+                            </button>
+                            <view contentMode="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="Qiy-Wj-men">
+                                <rect key="frame" x="0.0" y="127" width="375" height="35"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="l6k-9P-ef7" userLabel="height &lt;= 35"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="r7D-NU-h59" userLabel="Players">
+                                <rect key="frame" x="15" y="127" width="345" height="35"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Player 1" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BEz-F2-ITh" userLabel="Player 1">
+                                        <rect key="frame" x="0.0" y="0.0" width="80.5" height="35"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.22619047619999999" green="0.70827555129999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="no" returnKeyType="done" textContentType="name"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Player 2" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9ab-Fy-xLg" userLabel="Player 2">
+                                        <rect key="frame" x="88.5" y="0.0" width="80" height="35"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.22619047619999999" green="0.70827555129999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="no" returnKeyType="done" textContentType="name"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Player 3" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dFj-DR-TYe" userLabel="Player 3">
+                                        <rect key="frame" x="176.5" y="0.0" width="80.5" height="35"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.22619047619999999" green="0.70827555129999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="no" returnKeyType="done" textContentType="name"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Player 4" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4qS-7z-SWX" userLabel="Player 4">
+                                        <rect key="frame" x="265" y="0.0" width="80" height="35"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.22619047619999999" green="0.70827555129999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" spellCheckingType="no" returnKeyType="done" textContentType="name"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Round 1" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wG8-mv-XUj" userLabel="Round">
+                                <rect key="frame" x="144" y="33" width="86" height="40"/>
+                                <color key="backgroundColor" red="0.85753319299999997" green="0.85753319299999997" blue="0.85753319299999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="uJl-c8-gcr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wah-e7-sIX">
+                                <rect key="frame" x="263" y="71" width="85" height="30"/>
+                                <state key="normal" title="Enter Round"/>
+                                <connections>
+                                    <action selector="pressedEnterRound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0IE-BR-pm2"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iae-df-033" userLabel="Score Inputs">
+                                <rect key="frame" x="11" y="179" width="353" height="30"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="score" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FgZ-id-09u" userLabel="Score 1">
+                                        <rect key="frame" x="0.0" y="0.0" width="75.5" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" label="score"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="score" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9s7-O1-AfL" userLabel="Score 2">
+                                        <rect key="frame" x="92.5" y="0.0" width="75.5" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="score" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aor-7J-10q" userLabel="Score 3">
+                                        <rect key="frame" x="185" y="0.0" width="75.5" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="score" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZGC-Ld-WhE" userLabel="Score 4">
+                                        <rect key="frame" x="277.5" y="0.0" width="75.5" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="OIV-7O-qtp"/>
+                                    <constraint firstItem="FgZ-id-09u" firstAttribute="leading" secondItem="Iae-df-033" secondAttribute="leading" id="Rep-gJ-cSp"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZGC-Ld-WhE" secondAttribute="trailing" id="u8t-4x-4wP"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="Tt7-OZ-xGX" userLabel="Score Table">
+                                <rect key="frame" x="11" y="224" width="353" height="427"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="blb-OV-17g" userLabel="Player 1 Scores">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="427"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEW-vm-0bs" userLabel="Player 2 Scores">
+                                        <rect key="frame" x="93" y="0.0" width="74.5" height="427"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e53-RU-Hnd" userLabel="Player 3 Scores">
+                                        <rect key="frame" x="185.5" y="0.0" width="75" height="427"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6h-qv-dfQ" userLabel="Player 4 Scores">
+                                        <rect key="frame" x="278.5" y="0.0" width="74.5" height="427"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.85753319300518138" green="0.85753319300518138" blue="0.85753319300518138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Iae-df-033" firstAttribute="top" secondItem="Qiy-Wj-men" secondAttribute="bottom" constant="17" id="8nU-v4-LrX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wah-e7-sIX" secondAttribute="trailing" constant="27" id="9bh-kJ-WRi"/>
+                            <constraint firstItem="Iae-df-033" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11" id="Fz7-cC-afu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r7D-NU-h59" secondAttribute="trailing" constant="15" id="IaT-e0-SGe"/>
+                            <constraint firstItem="wah-e7-sIX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="51" id="JAx-rn-QCD"/>
+                            <constraint firstItem="wG8-mv-XUj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="144" id="MCm-Nc-Ile" userLabel="Text View.leading = Safe Area.leading + 144.5"/>
+                            <constraint firstItem="Qiy-Wj-men" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Mi2-ps-msl"/>
+                            <constraint firstItem="Tt7-OZ-xGX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="224" id="QEb-pU-y2f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Tt7-OZ-xGX" secondAttribute="bottom" constant="16" id="Qzf-kA-yxs"/>
+                            <constraint firstItem="Qiy-Wj-men" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RFE-mW-oXf"/>
+                            <constraint firstItem="Tt7-OZ-xGX" firstAttribute="top" secondItem="Iae-df-033" secondAttribute="bottom" constant="15" id="Rm7-Ci-8FS"/>
+                            <constraint firstItem="Qoc-Oj-YFY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="TN9-Fa-8YU"/>
+                            <constraint firstItem="r7D-NU-h59" firstAttribute="top" secondItem="Qiy-Wj-men" secondAttribute="top" id="Vuu-9o-myo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Iae-df-033" secondAttribute="trailing" constant="11" id="ZiS-sv-b91"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tt7-OZ-xGX" secondAttribute="trailing" constant="11" id="d5n-YM-6tK"/>
+                            <constraint firstItem="wah-e7-sIX" firstAttribute="top" secondItem="wG8-mv-XUj" secondAttribute="bottom" constant="-2" id="dVG-hD-afy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wG8-mv-XUj" secondAttribute="trailing" constant="145" id="e96-dP-Pa5" userLabel="Safe Area.trailing = Text View.trailing + 144.5"/>
+                            <constraint firstItem="r7D-NU-h59" firstAttribute="bottom" secondItem="Qiy-Wj-men" secondAttribute="bottom" id="hJV-YX-7fu"/>
+                            <constraint firstItem="Tt7-OZ-xGX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11" id="hfe-fY-kOw"/>
+                            <constraint firstItem="Qoc-Oj-YFY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="51" id="kxc-y1-GOc"/>
+                            <constraint firstItem="Qoc-Oj-YFY" firstAttribute="top" secondItem="wG8-mv-XUj" secondAttribute="bottom" constant="-2" id="mo7-Rf-zpi"/>
+                            <constraint firstItem="Qiy-Wj-men" firstAttribute="top" secondItem="wG8-mv-XUj" secondAttribute="bottom" constant="54" id="p4L-ys-KtV"/>
+                            <constraint firstItem="wah-e7-sIX" firstAttribute="leading" secondItem="wG8-mv-XUj" secondAttribute="trailing" constant="33" id="rQl-ei-ddJ"/>
+                            <constraint firstItem="wG8-mv-XUj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="rZ3-pz-od9"/>
+                            <constraint firstItem="r7D-NU-h59" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="uOa-dq-3HN"/>
+                            <constraint firstItem="wG8-mv-XUj" firstAttribute="leading" secondItem="Qoc-Oj-YFY" secondAttribute="trailing" constant="36" id="zgY-h9-9C0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="player1ScoreTextField" destination="FgZ-id-09u" id="91K-q8-XzD"/>
+                        <outlet property="player1ScoresTextView" destination="blb-OV-17g" id="siy-88-8mN"/>
+                        <outlet property="player2ScoreTextField" destination="9s7-O1-AfL" id="2EV-Oe-o6W"/>
+                        <outlet property="player2ScoresTextView" destination="KEW-vm-0bs" id="Pst-sW-rIc"/>
+                        <outlet property="player3ScoreTextField" destination="Aor-7J-10q" id="egx-2x-Gbw"/>
+                        <outlet property="player3ScoresTextView" destination="e53-RU-Hnd" id="8xt-50-TZ8"/>
+                        <outlet property="player4ScoreTextField" destination="ZGC-Ld-WhE" id="D0u-sT-5Wf"/>
+                        <outlet property="player4ScoresTextView" destination="r6h-qv-dfQ" id="PGE-4S-ncC"/>
+                        <outlet property="roundLabel" destination="wG8-mv-XUj" id="49K-nG-1Fg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.5" y="117.5"/>
         </scene>
     </scenes>
 </document>
